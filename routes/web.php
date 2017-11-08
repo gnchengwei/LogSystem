@@ -14,3 +14,20 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+//提交测试模块
+Route::post('/test', 'TestLogController@postTest');
+
+
+//提交测试日志记录
+Route::post('/log', 'TestLogController@postLog');
+//Route::get('test', function () {
+//    return App\Test::all();
+//});
+//
+Route::group(['middleware' => ['web']], function () {
+    //提交测试模块
+    Route::get('/test', 'TestLogController@getTest');
+    //提交测试模块
+    Route::get('/test/{id}', 'TestLogController@getTestDetail');
+});

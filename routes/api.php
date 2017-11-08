@@ -13,6 +13,14 @@ use Illuminate\Http\Request;
 |
 */
 
-Route::middleware('auth:api')->get('/user', function (Request $request) {
-    return $request->user();
-});
+//Route::middleware('auth:api')->get('/user', function (Request $request) {
+//    return $request->user();
+//});
+
+//Route::middleware('auth:api')->get('/test', 'TestLogController@getTest');
+//
+//
+//Route::group(['middleware' => ['web']], function () {
+//    //提交测试模块
+//    Route::get('/test', 'TestLogController@getTest');
+//});
